@@ -9,7 +9,7 @@ class TelegramForwarder:
         self.api_id = api_id
         self.api_hash = api_hash
         self.phone_number = phone_number
-        self.client = TelegramClient('session_x' + phone_number, api_id, api_hash)
+        self.client = TelegramClient('session_a' + phone_number, api_id, api_hash)
 
     async def forward_messages_to_channel(self, source_chat_id, destination_channel_id, keywords):
         await self.client.connect()
